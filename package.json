@@ -1,0 +1,47 @@
+{
+  "name": "nuxt3-ssr-temp",
+  "keywords": [
+    "nuxt3",
+    "ssr",
+    "vue3",
+    "vue-router",
+    "vueuse",
+    "pinia",
+    "i18n",
+    "ant-design-vue",
+    "dayjs",
+    "less",
+    "swiper",
+    "wow.js"
+  ],
+  "description": "这是一个基于官方脚手架生成的 Nuxt3 项目，已集成了多种主流 Vue3 生态相关工具和库。具体如下： ssr、nuxt3、vue3、vue-router、less、wow.js + animate.css、swiper、 ant-design-vue、pinia、vueuse、lodash、 dayjs、 qs、 i18n。 这个项目旨在为开发者提供一个开箱即用的 Nuxt3 项目模板，提升开发效率，并通过集成各种实用工具和库，简化开发流程。",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --dotenv .env.development",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@ant-design-vue/nuxt": "^1.4.1",
+    "@ant-design/icons-vue": "^7.0.1",
+    "@nuxtjs/i18n": "^8.3.1",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@pinia/nuxt": "^0.5.1",
+    "@vueuse/nuxt": "^10.9.0",
+    "animate.css": "^4.1.1",
+    "ant-design-vue": "3.2.20",
+    "dayjs-nuxt": "^2.1.9",
+    "less": "^4.2.0",
+    "nuxt-lodash": "^2.5.3",
+    "qs": "^6.12.1",
+    "swiper": "11.0.5",
+    "wow.js": "^1.2.2"
+  }
+}
