@@ -1359,7 +1359,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"keyword","content":"我是SEO关键字"},{"name":"description","content":"我是SEO描述"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/logo.ico"}],"style":[],"script":[],"noscript":[],"title":"我是SEO标题"};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"keyword","content":"我是SEO关键字"},{"name":"description","content":"我是SEO描述"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/logo.ico"}],"style":[],"script":[{"src":"https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js","type":"text/javascript"},{"innerHTML":"new VConsole();"}],"noscript":[],"title":"我是SEO标题"};
 
 const appRootId = "__nuxt";
 

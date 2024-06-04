@@ -14,10 +14,15 @@
 - **dayjs** ...
 - **qs** ...
 - **i18n** 多语言国际化
+- **vconsole** 移动端调试工具（本地/测试环境）
 ...
 
 ## 前提
 - 请先按照官方要求，安装node 18.0.0+
+
+## pm2启动/预览
+- 先保证已创建 `ecosystem.config.js` 
+- 然后执行 `pm2 start ecosystem.config.js`
 
 
 ## Setup

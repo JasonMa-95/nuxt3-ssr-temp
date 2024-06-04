@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <NuxtLink to="/list">进入列表页</NuxtLink> -->
+    <NuxtLink to="/">去首页</NuxtLink>
     
     <h1 style="font-size: 20px; padding: 20px; font-weight: bold">
       已集成各种开箱即用的工具、类库，使用示例如下：

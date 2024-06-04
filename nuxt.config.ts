@@ -67,6 +67,18 @@ export default defineNuxtConfig({
       ],
       // 自定义浏览器标签logo
       link: [{ rel: "icon", type: "image/x-icon", href: "/logo.ico" }],
+      script:
+      process.env.VITE_VCONSOLE !== undefined
+        ? [
+            {
+              src: "https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js",
+              type: "text/javascript",
+            },
+            {
+              innerHTML: `new VConsole();`,
+            },
+          ]
+        : [],
     },
     // server: {
     //   port: 8888,

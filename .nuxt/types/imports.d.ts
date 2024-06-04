@@ -19,7 +19,7 @@ declare global {
   const computedEager: typeof import('../../node_modules/@vueuse/core')['computedEager']
   const computedInject: typeof import('../../node_modules/@vueuse/core')['computedInject']
   const computedWithControl: typeof import('../../node_modules/@vueuse/core')['computedWithControl']
-  const constants: typeof import('../../utils/constants')['default']
+  const constants: typeof import('../../utils/index')['constants']
   const controlledComputed: typeof import('../../node_modules/@vueuse/core')['controlledComputed']
   const controlledRef: typeof import('../../node_modules/@vueuse/core')['controlledRef']
   const createError: typeof import('../../node_modules/nuxt/dist/app/composables/error')['createError']
@@ -118,6 +118,7 @@ declare global {
   const isWeakSet: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['isWeakSet']
   const linkTo: typeof import('../../utils/index')['linkTo']
   const loadPayload: typeof import('../../node_modules/nuxt/dist/app/composables/payload')['loadPayload']
+  const logInfo: typeof import('../../utils/index')['logInfo']
   const makeDestructurable: typeof import('../../node_modules/@vueuse/core')['makeDestructurable']
   const markRaw: typeof import('../../node_modules/vue')['markRaw']
   const mergeModels: typeof import('../../node_modules/vue')['mergeModels']
@@ -192,6 +193,7 @@ declare global {
   const toRef: typeof import('../../node_modules/vue')['toRef']
   const toRefs: typeof import('../../node_modules/vue')['toRefs']
   const toValue: typeof import('../../node_modules/vue')['toValue']
+  const transformAndSortData: typeof import('../../utils/index')['transformAndSortData']
   const transformDataToArrays: typeof import('../../utils/index')['transformDataToArrays']
   const triggerRef: typeof import('../../node_modules/vue')['triggerRef']
   const tryOnBeforeMount: typeof import('../../node_modules/@vueuse/core')['tryOnBeforeMount']
@@ -713,7 +715,7 @@ declare module 'vue' {
     readonly computedEager: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedEager']>
     readonly computedInject: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedInject']>
     readonly computedWithControl: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedWithControl']>
-    readonly constants: UnwrapRef<typeof import('../../utils/constants')['default']>
+    readonly constants: UnwrapRef<typeof import('../../utils/index')['constants']>
     readonly controlledComputed: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['controlledComputed']>
     readonly controlledRef: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['controlledRef']>
     readonly createError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['createError']>
@@ -812,6 +814,7 @@ declare module 'vue' {
     readonly isWeakSet: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['isWeakSet']>
     readonly linkTo: UnwrapRef<typeof import('../../utils/index')['linkTo']>
     readonly loadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['loadPayload']>
+    readonly logInfo: UnwrapRef<typeof import('../../utils/index')['logInfo']>
     readonly makeDestructurable: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['makeDestructurable']>
     readonly markRaw: UnwrapRef<typeof import('../../node_modules/vue')['markRaw']>
     readonly mergeModels: UnwrapRef<typeof import('../../node_modules/vue')['mergeModels']>
@@ -886,6 +889,7 @@ declare module 'vue' {
     readonly toRef: UnwrapRef<typeof import('../../node_modules/vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('../../node_modules/vue')['toRefs']>
     readonly toValue: UnwrapRef<typeof import('../../node_modules/vue')['toValue']>
+    readonly transformAndSortData: UnwrapRef<typeof import('../../utils/index')['transformAndSortData']>
     readonly transformDataToArrays: UnwrapRef<typeof import('../../utils/index')['transformDataToArrays']>
     readonly triggerRef: UnwrapRef<typeof import('../../node_modules/vue')['triggerRef']>
     readonly tryOnBeforeMount: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['tryOnBeforeMount']>
@@ -1400,7 +1404,7 @@ declare module '@vue/runtime-core' {
     readonly computedEager: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedEager']>
     readonly computedInject: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedInject']>
     readonly computedWithControl: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['computedWithControl']>
-    readonly constants: UnwrapRef<typeof import('../../utils/constants')['default']>
+    readonly constants: UnwrapRef<typeof import('../../utils/index')['constants']>
     readonly controlledComputed: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['controlledComputed']>
     readonly controlledRef: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['controlledRef']>
     readonly createError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['createError']>
@@ -1499,6 +1503,7 @@ declare module '@vue/runtime-core' {
     readonly isWeakSet: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['isWeakSet']>
     readonly linkTo: UnwrapRef<typeof import('../../utils/index')['linkTo']>
     readonly loadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['loadPayload']>
+    readonly logInfo: UnwrapRef<typeof import('../../utils/index')['logInfo']>
     readonly makeDestructurable: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['makeDestructurable']>
     readonly markRaw: UnwrapRef<typeof import('../../node_modules/vue')['markRaw']>
     readonly mergeModels: UnwrapRef<typeof import('../../node_modules/vue')['mergeModels']>
@@ -1573,6 +1578,7 @@ declare module '@vue/runtime-core' {
     readonly toRef: UnwrapRef<typeof import('../../node_modules/vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('../../node_modules/vue')['toRefs']>
     readonly toValue: UnwrapRef<typeof import('../../node_modules/vue')['toValue']>
+    readonly transformAndSortData: UnwrapRef<typeof import('../../utils/index')['transformAndSortData']>
     readonly transformDataToArrays: UnwrapRef<typeof import('../../utils/index')['transformDataToArrays']>
     readonly triggerRef: UnwrapRef<typeof import('../../node_modules/vue')['triggerRef']>
     readonly tryOnBeforeMount: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['tryOnBeforeMount']>

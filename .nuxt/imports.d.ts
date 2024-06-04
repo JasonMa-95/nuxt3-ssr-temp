@@ -31,8 +31,7 @@ export { injectHead, useHead, useSeoMeta, useHeadSafe, useServerHead, useServerS
 export { useFoo } from '../composables/useFoo';
 export { useMyList } from '../composables/useMyList';
 export { default as api } from '../utils/api';
-export { default as constants } from '../utils/constants';
-export { linkTo, getCurrentDomainAndPortWithPrefix, getExtendMapField, getImgUrl, transformDataToArrays } from '../utils/index';
+export { constants, linkTo, getCurrentDomainAndPortWithPrefix, getExtendMapField, getImgUrl, transformDataToArrays, transformAndSortData, logInfo } from '../utils/index';
 export { useUserStore } from '../stores/useUserStore';
 export { defineStore, acceptHMRUpdate, usePinia, storeToRefs } from '../node_modules/@pinia/nuxt/dist/runtime/composables';
 export { useDayjs } from '../node_modules/dayjs-nuxt/dist/runtime/composables/dayjs';
