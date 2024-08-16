@@ -3,7 +3,7 @@
 // App Config
 import type { Defu } from 'defu'
 
-import type { default as appConfig0 } from "E:/nuxt3-ssr-temp/app.config";
+import type { default as appConfig0 } from "../../app.config";
 
 type UserAppConfig = Defu<{}, [typeof appConfig0]>
 

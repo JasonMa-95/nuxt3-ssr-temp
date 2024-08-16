@@ -25,11 +25,33 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "dayjs-nuxt",
     "nuxt-lodash",
-    '@nuxtjs/i18n',
+    // "@nuxtjs/i18n",// 多语言模块会影响 @nuxtjs/sitemap 模块的生成，暂时没找到方案
+    "@nuxtjs/sitemap", // 生成sitemap
+    "@nuxt/image", // 图片懒加载
+    "nuxt3-leaflet", // 让nuxt3能支持leaflet地图
   ],
-  i18n: {
-    vueI18n: './i18n.config.ts' // if you are using custom path, default
+  image: {
+    dir: "./assets",
+    quality: 60,
   },
+  // nitro: {
+  //   // https://ezdoc.cn/docs/nitro/config#prerender 预加载处理（会影响打包）
+  //   prerender: {
+  //     crawlLinks: false,
+  //     routes: ["/", "sitemap.xml"],
+  //     ignore: ["/404"],
+  //   },
+  // },
+  /** sitemap 谷歌站点地图功能 */
+  site: {
+    url: process.env.VITE_SITEMAP_URL, // process.env.VITE_SITEMAP_URL   'https://www.greenvalleyintl.com'
+  },
+  sitemap: {
+    sources: ["/api/sitemap"],
+  },
+  // i18n: {
+  //   vueI18n: "./i18n.config.ts", // if you are using custom path, default
+  // },
   css: [
     "~/assets/styles/base.less",
     "~/assets/styles/main.less",
@@ -51,34 +73,31 @@ export default defineNuxtConfig({
   // 软件配置（兜底）
   app: {
     head: {
-      title:
-        "我是SEO标题",
+      title: "我是SEO标题",
       meta: [
         {
           name: "keyword",
-          content:
-            "我是SEO关键字",
+          content: "我是SEO关键字",
         },
         {
           name: "description",
-          content:
-            "我是SEO描述",
+          content: "我是SEO描述",
         },
       ],
       // 自定义浏览器标签logo
       link: [{ rel: "icon", type: "image/x-icon", href: "/logo.ico" }],
       script:
-      process.env.VITE_VCONSOLE !== undefined
-        ? [
-            {
-              src: "https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js",
-              type: "text/javascript",
-            },
-            {
-              innerHTML: `new VConsole();`,
-            },
-          ]
-        : [],
+        process.env.VITE_VCONSOLE !== undefined
+          ? [
+              {
+                src: "https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js",
+                type: "text/javascript",
+              },
+              {
+                innerHTML: `new VConsole();`,
+              },
+            ]
+          : [],
     },
     // server: {
     //   port: 8888,

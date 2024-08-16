@@ -2,6 +2,7 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "noEmit": true,
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -49,6 +50,9 @@
       "@unhead/vue": [
         "../node_modules/@unhead/vue"
       ],
+      "@nuxt/devtools": [
+        "../node_modules/@nuxt/devtools"
+      ],
       "@vue/runtime-core": [
         "../node_modules/@vue/runtime-core"
       ],
@@ -57,6 +61,9 @@
       ],
       "@vue/runtime-dom": [
         "../node_modules/@vue/runtime-dom"
+      ],
+      "unplugin-vue-router/client": [
+        "../node_modules/unplugin-vue-router/client"
       ],
       "@nuxt/schema": [
         "../node_modules/@nuxt/schema"
@@ -97,34 +104,30 @@
       "#dayjs": [
         "../node_modules/dayjs-nuxt/dist/runtime/composables/dayjs"
       ],
-      "vue-i18n": [
-        "../node_modules/vue-i18n/dist/vue-i18n"
+      "#sitemap": [
+        "../node_modules/@nuxtjs/sitemap/dist/runtime/types"
       ],
-      "@intlify/shared": [
-        "../node_modules/@intlify/shared/dist/shared"
+      "#image": [
+        "../node_modules/@nuxt/image/dist/runtime"
       ],
-      "@intlify/message-compiler": [
-        "../node_modules/@intlify/message-compiler/dist/message-compiler"
+      "#image/*": [
+        "../node_modules/@nuxt/image/dist/runtime/*"
       ],
-      "@intlify/core-base": [
-        "../node_modules/@intlify/core-base/dist/core-base"
+      "#vue-router": [
+        "./vue-router"
       ],
-      "@intlify/core": [
-        "../node_modules/@intlify/core/dist/core.node"
+      "#internal/nuxt-site-config": [
+        "../node_modules/nuxt-site-config/dist/runtime/nitro/composables"
       ],
-      "@intlify/utils/h3": [
-        "../node_modules/@intlify/utils/dist/h3"
-      ],
-      "ufo": [
-        "../node_modules/ufo/dist/index"
-      ],
-      "is-https": [
-        "../node_modules/is-https/dist/index"
-      ],
-      "#i18n": [
-        "../node_modules/@nuxtjs/i18n/dist/runtime/composables/index"
+      "#internal/nuxt-site-config/*": [
+        "../node_modules/nuxt-site-config/dist/runtime/nitro/composables/*"
       ]
-    }
+    },
+    "lib": [
+      "esnext",
+      "webworker",
+      "dom.iterable"
+    ]
   },
   "include": [
     "./types/nitro-nuxt.d.ts",
@@ -133,9 +136,14 @@
     "../node_modules/@vueuse/nuxt/runtime/server",
     "../node_modules/dayjs-nuxt/runtime/server",
     "../node_modules/nuxt-lodash/runtime/server",
-    "../node_modules/@nuxtjs/i18n/runtime/server",
+    "../node_modules/nuxt-site-config/dist/module.mjs/runtime/server",
+    "../node_modules/@nuxtjs/sitemap/runtime/server",
+    "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/nuxt3-leaflet/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
+    "./module/nuxt-site-config.d.ts",
+    "./module/@nuxtjs-sitemap.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
@@ -143,6 +151,7 @@
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/nuxt-site-config/dist/node_modules",
     "../dist"
   ]
 }

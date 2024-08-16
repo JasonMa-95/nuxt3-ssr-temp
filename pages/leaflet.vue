@@ -1,0 +1,4 @@
+
+<template>
+  <LeafletDemo />
+</template>

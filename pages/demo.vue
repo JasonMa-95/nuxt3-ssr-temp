@@ -1,7 +1,9 @@
 <template>
   <div>
     <NuxtLink to="/">去首页</NuxtLink>
-    
+    <br />
+    <NuxtLink to="/leaflet">去Leaflet demo页</NuxtLink>
+
     <h1 style="font-size: 20px; padding: 20px; font-weight: bold">
       已集成各种开箱即用的工具、类库，使用示例如下：
     </h1>
@@ -24,12 +26,12 @@
 
     <h2>qs示例: 使用qs.parse('a=c') => {{ qs.parse("a=c") }}</h2>
 
-    <h2>
+    <!-- <h2>
       国际化示例:
       <button @click="setLocale('en')">en</button>
       <button @click="setLocale('cn')">cn/中文</button>
       {{ $t("welcome") }}------{{ $t("name") }}
-    </h2>
+    </h2> -->
 
     <h2>
       <p>useCookie组合函数: {{ counter || "-" }}</p>
@@ -42,6 +44,18 @@
       useState组合函数:
       <pre>{{ foo }}</pre>
     </h2>
+
+    <h2>
+      图片懒加载：(从网络里面就可以看出，滚动到一定位置之后，才懒加载的图片)
+      <br />
+      <NuxtImg
+        style="border: 1px solid aqua; width: 500px"
+        class="imgbg"
+        src="https://data-file-platform.s3.ap-southeast-1.amazonaws.com/gvi-us-2024-08-16MTcyMzgwMDIyNTA2Nw%3D%3D.jpg"
+        loading="lazy"
+        quality="50"
+      />
+    </h2>
   </div>
 </template>
 
@@ -49,8 +63,8 @@
 // import { useDayjs } from "#dayjs";
 import qs from "qs";
 
-// i18n国际化
-const { locale, setLocale } = useI18n();
+// // i18n国际化
+// const { locale, setLocale } = useI18n();
 
 // pinia
 import { useUserStore } from "@/stores/useUserStore";

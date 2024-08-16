@@ -1,12 +1,10 @@
 
 import type { CustomAppConfig } from 'nuxt/schema'
 import type { Defu } from 'defu'
-import cfg0 from "E:/nuxt3-ssr-temp/app.config"
+import cfg0 from "../../app.config"
 
 declare const inlineConfig = {
-  "nuxt": {
-    "buildId": "dev"
-  }
+  "nuxt": {}
 }
 type ResolvedAppConfig = Defu<typeof inlineConfig, [typeof cfg0]>
 type IsAny<T> = 0 extends 1 & T ? true : false
