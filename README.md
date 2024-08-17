@@ -26,6 +26,7 @@
 ## pm2启动/预览
 - 先保证已创建 `ecosystem.config.js` 
 - 然后执行 `pm2 start ecosystem.config.js`
+- 通过 http://localhost:8888 可以看到项目预览（也就是打包后部署到服务器的项目）
 
 
 ## Setup
