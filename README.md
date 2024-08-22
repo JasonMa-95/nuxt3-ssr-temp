@@ -1,5 +1,6 @@
 # nuxt3-ssr-temp
 > An SSR website using Nuxt3, vue3, Pinia, less,swiper ,ant-design-vue ,vueuse ,lodash ,dayjs ,qs ,i18n ,sitemap , wow.js + animate.css and leaflet. You can use it as a template to build your own website.…
+
 > 这是一个基于官方脚手架生成的nuxt3 ssr项目
 > 已集成各类主流vue3生态相关工具或库，具体如下：
 - **nuxt3** vue官方推荐的最好用，生态最全的nuxt3服务端渲染ssr框架
