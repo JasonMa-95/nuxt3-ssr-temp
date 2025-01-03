@@ -146,6 +146,7 @@ declare global {
   const onUnmounted: typeof import('../../node_modules/vue')['onUnmounted']
   const onUpdated: typeof import('../../node_modules/vue')['onUpdated']
   const pausableWatch: typeof import('../../node_modules/@vueuse/core')['pausableWatch']
+  const persistedState: typeof import('../../node_modules/@pinia-plugin-persistedstate/nuxt/dist/runtime/storages')['persistedState']
   const prefetchComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']
   const preloadComponents: typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']
   const preloadPayload: typeof import('../../node_modules/nuxt/dist/app/composables/payload')['preloadPayload']
@@ -235,6 +236,7 @@ declare global {
   const useAt: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['at']
   const useAttempt: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['attempt']
   const useAttrs: typeof import('../../node_modules/vue')['useAttrs']
+  const useAuthStore: typeof import('../../stores/useAuthStore')['useAuthStore']
   const useBase64: typeof import('../../node_modules/@vueuse/core')['useBase64']
   const useBattery: typeof import('../../node_modules/@vueuse/core')['useBattery']
   const useBefore: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['before']
@@ -248,6 +250,7 @@ declare global {
   const useCached: typeof import('../../node_modules/@vueuse/core')['useCached']
   const useCamelCase: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['camelCase']
   const useCapitalize: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['capitalize']
+  const useCartStore: typeof import('../../stores/useCartStore_test')['useCartStore']
   const useCastArray: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['castArray']
   const useCeil: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['ceil']
   const useChain: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['chain']
@@ -456,7 +459,6 @@ declare global {
   const useNthArg: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['nthArg']
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
-  const useNuxtDevTools: typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const useObjectUrl: typeof import('../../node_modules/@vueuse/core')['useObjectUrl']
   const useOffsetPagination: typeof import('../../node_modules/@vueuse/core')['useOffsetPagination']
   const useOmit: typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['omit']
@@ -863,6 +865,7 @@ declare module 'vue' {
     readonly onUnmounted: UnwrapRef<typeof import('../../node_modules/vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('../../node_modules/vue')['onUpdated']>
     readonly pausableWatch: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['pausableWatch']>
+    readonly persistedState: UnwrapRef<typeof import('../../node_modules/@pinia-plugin-persistedstate/nuxt/dist/runtime/storages')['persistedState']>
     readonly prefetchComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['prefetchComponents']>
     readonly preloadComponents: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/preload')['preloadComponents']>
     readonly preloadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['preloadPayload']>
@@ -952,6 +955,7 @@ declare module 'vue' {
     readonly useAt: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['at']>
     readonly useAttempt: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['attempt']>
     readonly useAttrs: UnwrapRef<typeof import('../../node_modules/vue')['useAttrs']>
+    readonly useAuthStore: UnwrapRef<typeof import('../../stores/useAuthStore')['useAuthStore']>
     readonly useBase64: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBase64']>
     readonly useBattery: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBattery']>
     readonly useBefore: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['before']>
@@ -965,6 +969,7 @@ declare module 'vue' {
     readonly useCached: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useCached']>
     readonly useCamelCase: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['camelCase']>
     readonly useCapitalize: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['capitalize']>
+    readonly useCartStore: UnwrapRef<typeof import('../../stores/useCartStore_test')['useCartStore']>
     readonly useCastArray: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['castArray']>
     readonly useCeil: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['ceil']>
     readonly useChain: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['chain']>
@@ -1173,7 +1178,6 @@ declare module 'vue' {
     readonly useNthArg: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['nthArg']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
-    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly useObjectUrl: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useObjectUrl']>
     readonly useOffsetPagination: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useOffsetPagination']>
     readonly useOmit: UnwrapRef<typeof import('../../node_modules/nuxt-lodash/dist/runtime/lodash')['omit']>

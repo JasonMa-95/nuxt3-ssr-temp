@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   modules: [
     "@ant-design-vue/nuxt",
     "@pinia/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
     "@vueuse/nuxt",
     "dayjs-nuxt",
     "nuxt-lodash",
@@ -30,18 +31,35 @@ export default defineNuxtConfig({
     "@nuxt/image", // 图片懒加载
     "nuxt3-leaflet", // 让nuxt3能支持leaflet地图
   ],
+  pinia: {
+    autoImports: [
+      "defineStore", // import { defineStore } from 'pinia'
+    ],
+  },
+  // pinia持久化配置
+  piniaPersistedstate: {
+    // cookieOptions: {
+    //   maxAge: 2 * 365 * 24 * 60 * 60 * 1000,
+    // },
+    storage: "sessionStorage",
+  },
   image: {
     dir: "./assets",
     quality: 60,
   },
-  // nitro: {
-  //   // https://ezdoc.cn/docs/nitro/config#prerender 预加载处理（会影响打包）
-  //   prerender: {
-  //     crawlLinks: false,
-  //     routes: ["/", "sitemap.xml"],
-  //     ignore: ["/404"],
-  //   },
-  // },
+  nitro: {
+    output: {
+      dir: "dist",
+      // serverDir: "", // SSR输出路径
+      // publicDir: "", // SSG输出路径
+    },
+    // // https://ezdoc.cn/docs/nitro/config#prerender 预加载处理（会影响打包）
+    // prerender: {
+    //   crawlLinks: false,
+    //   routes: ["/", "sitemap.xml"],
+    //   ignore: ["/404"],
+    // },
+  },
   /** sitemap 谷歌站点地图功能 */
   site: {
     url: process.env.VITE_SITEMAP_URL, // process.env.VITE_SITEMAP_URL   'https://www.greenvalleyintl.com'

@@ -108,7 +108,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev"
+        "./manifest/meta/7d4ca099-3fc6-40dd-a4f1-01826ca3f44b.json"
       ],
       "#build": [
         "."
@@ -154,6 +154,7 @@
     "../**/*",
     "../node_modules/@ant-design-vue/nuxt/runtime",
     "../node_modules/@pinia/nuxt/runtime",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/runtime",
     "../node_modules/@vueuse/nuxt/runtime",
     "../node_modules/dayjs-nuxt/runtime",
     "../node_modules/nuxt-lodash/runtime",
@@ -172,6 +173,7 @@
     "../node_modules/nuxt-site-config/dist/node_modules",
     "../node_modules/@ant-design-vue/nuxt/runtime/server",
     "../node_modules/@pinia/nuxt/runtime/server",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/runtime/server",
     "../node_modules/@vueuse/nuxt/runtime/server",
     "../node_modules/dayjs-nuxt/runtime/server",
     "../node_modules/nuxt-lodash/runtime/server",
@@ -180,7 +182,6 @@
     "../node_modules/@nuxt/image/runtime/server",
     "../node_modules/nuxt3-leaflet/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
-    "../node_modules/@nuxt/telemetry/runtime/server",
-    "../.output"
+    "../node_modules/@nuxt/telemetry/runtime/server"
   ]
 }

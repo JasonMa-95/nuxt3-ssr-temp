@@ -39,9 +39,11 @@
   "devDependencies": {
     "@ant-design-vue/nuxt": "^1.4.1",
     "@ant-design/icons-vue": "^7.0.1",
+    "@nuxt/image": "^1.7.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/sitemap": "^5.2.0",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@pinia/nuxt": "^0.5.1",
     "@vueuse/nuxt": "^10.9.0",
     "animate.css": "^4.1.1",
@@ -52,7 +54,6 @@
     "nuxt3-leaflet": "^1.0.13",
     "qs": "^6.12.1",
     "swiper": "11.0.5",
-    "wow.js": "^1.2.2",
-    "@nuxt/image": "^1.7.0"
+    "wow.js": "^1.2.2"
   }
 }

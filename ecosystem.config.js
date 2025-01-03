@@ -5,7 +5,7 @@ module.exports = {
       name: "nuxt3-ssr-temp",
       exec_mode: "cluster",
       instances: "1", // Or a number of instances
-      script: "./.output/server/index.mjs",
+      script: "./dist/server/index.mjs",
       args: "start",
       port:'8888'
     },

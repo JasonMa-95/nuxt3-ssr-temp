@@ -10,7 +10,7 @@
 - **wow.js + animate.css** 动画效果
 - **swiper** 公认最好用的轮播插件                  
 - **ant-design-vue** 基于vue3的UI组件库
-- **pinia**  传说中的vuex5
+- **pinia+数据持久化**  传说中的vuex5
 - **vueuse** Vue3组合式API的工具集
 - **lodash** ...
 - **dayjs** ...

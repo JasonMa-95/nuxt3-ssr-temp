@@ -133,6 +133,7 @@
     "./types/nitro-nuxt.d.ts",
     "../node_modules/@ant-design-vue/nuxt/runtime/server",
     "../node_modules/@pinia/nuxt/runtime/server",
+    "../node_modules/@pinia-plugin-persistedstate/nuxt/runtime/server",
     "../node_modules/@vueuse/nuxt/runtime/server",
     "../node_modules/dayjs-nuxt/runtime/server",
     "../node_modules/nuxt-lodash/runtime/server",
